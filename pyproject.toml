@@ -4,4 +4,8 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "keras>=3.9.2",
+    "opencv-python>=4.11.0.86",
+    "pyqt6>=6.9.0",
+]
