@@ -1,12 +1,12 @@
 import cv2
 import cv2.data
 import numpy as np
-from _system import log_config
+from _system.log_config import setup_logger
 
 class FaceDetector():
     
     def __init__(self):
-        self.logger = log_config.setup_logger(name=__name__)
+        self.logger = setup_logger(name=__name__)
         self.logger.info(msg=f'FaceDetector <{id(self)}> created')
         self.face_classifier = cv2.CascadeClassifier(
             cv2.data.haarcascades + "haarcascade_frontalface_default.xml"

@@ -11,3 +11,4 @@ wheels/
 
 # Custom
 _face_detector/test_image.jpg
+_dataset/
