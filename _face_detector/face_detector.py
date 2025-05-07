@@ -13,12 +13,10 @@ class FaceDetector():
         )
         
     def detect(self, frame:np.ndarray) -> tuple:
-        self.logger.info(msg=f'Detecting on frame: {frame.shape}')
-        detected_face_points = self.face_classifier.detectMultiScale(
+        detected_faces_points = self.face_classifier.detectMultiScale(
             image=frame,
             scaleFactor=1.1,
             minNeighbors=5,
             minSize=(40,40)
         )
-        self.logger.info(msg=f'Face found on: {detected_face_points}')
-        return detected_face_points
+        return detected_faces_points
